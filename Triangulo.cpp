@@ -37,8 +37,8 @@ void Triangulo::setv3(Punto _v3){
 
 
 double Triangulo::area(){
-    return (1.0/2) * (((v1.getx()*v2.gety()) + (v2.getx()*v3.gety()) + (v3.getx()*v1.gety())) - 
-    ((v1.getx()*v3.gety())+(v3.getx()*v2.gety())+(v2.getx()*v1.gety())));
+    return abs((1.0/2) * (((v1.getx()*v2.gety()) + (v2.getx()*v3.gety()) + (v3.getx()*v1.gety())) - 
+    ((v1.getx()*v3.gety())+(v3.getx()*v2.gety())+(v2.getx()*v1.gety()))));
 };
 double Triangulo::perimetro(){
     return v1.calculaDistancia(v2) + v2.calculaDistancia(v3) + v3.calculaDistancia(v1);
